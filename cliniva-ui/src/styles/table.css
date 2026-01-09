@@ -1,0 +1,327 @@
+.appointments-page {
+  margin-left: 255px;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+}
+
+.appointments-container {
+  padding: 30px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: #666;
+}
+
+.breadcrumb a {
+  color: #666;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #4a90e2;
+}
+
+.breadcrumb-separator {
+  color: #999;
+}
+
+.appointments-header {
+  background-color: #e8edf5;
+  padding: 20px 30px;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.appointments-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.search-box {
+  position: relative;
+  width: 300px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 15px 10px 40px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+.download-btn {
+  padding: 10px 15px;
+  background-color: transparent;
+  border: none;
+  color: #4a90e2;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.appointments-table-container {
+  background-color: #ffffff;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+}
+
+.appointments-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.appointments-table thead {
+  background-color: #f8f9fb;
+}
+
+.appointments-table th {
+  padding: 15px 20px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.appointments-table td {
+  padding: 15px 20px;
+  font-size: 13px;
+  color: #555;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.appointments-table tbody tr {
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.appointments-table tbody tr:hover {
+  background-color: #f8f9fb;
+}
+
+.patient-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.patient-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+}
+
+.time-cell,
+.email-cell,
+.mobile-cell,
+.address-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  font-size: 16px;
+  color: #999;
+}
+
+.email-icon {
+  color: #ff6b6b;
+}
+
+.mobile-icon {
+  color: #4caf50;
+}
+
+.location-icon {
+  color: #4a90e2;
+}
+
+.gender-badge {
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.gender-male {
+  background-color: #e8f5e9;
+  color: #4caf50;
+}
+
+.gender-female {
+  background-color: #f3e5f5;
+  color: #9c27b0;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 13px;
+  color: #333;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.action-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.approve-btn {
+  color: #4caf50;
+}
+
+.cancel-btn {
+  color: #f44336;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #ffffff;
+  border-top: 1px solid #e5e7eb;
+}
+
+.items-per-page {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.items-per-page select {
+  padding: 6px 30px 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  background-color: #fff;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.pagination-info {
+  font-size: 14px;
+  color: #666;
+}
+
+.pagination-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.pagination-btn {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background-color: #f8f9fb;
+  border-color: #4a90e2;
+  color: #4a90e2;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1024px) {
+  .appointments-page {
+    margin-left: 70px;
+  }
+
+  .appointments-table th:nth-child(n+7),
+  .appointments-table td:nth-child(n+7) {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .appointments-page {
+    margin-left: 60px;
+  }
+
+  .appointments-container {
+    padding: 15px;
+  }
+
+  .appointments-header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .appointments-table {
+    font-size: 12px;
+  }
+
+  .appointments-table th,
+  .appointments-table td {
+    padding: 10px;
+  }
+
+  .appointments-table th:nth-child(n+5),
+  .appointments-table td:nth-child(n+5) {
+    display: none;
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .appointments-table th:nth-child(n+4),
+  .appointments-table td:nth-child(n+4) {
+    display: none;
+  }
+
+  .patient-info {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
