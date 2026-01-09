@@ -13,7 +13,11 @@ const Sidebar = () => {
       </div>
 
       <div className="doctor-profile">
-       <img src="src/assets/images/doctor.webp" alt="Doctor" className="doctor-avatar"/>
+        <img 
+          src="https://i.pravatar.cc/150?img=12" 
+          alt="Doctor" 
+          className="doctor-avatar"
+        />
         <div className="doctor-name">Ashton Cox</div>
         <div className="doctor-role">DOCTOR</div>
       </div>
@@ -24,6 +28,7 @@ const Sidebar = () => {
           <Link 
             to="/" 
             className={`menu-item ${location.pathname === '/' ? 'active' : ''}`}
+            title="Appointments"
           >
             <div className="menu-icon">📋</div>
             <div className="menu-text">Appointments</div>

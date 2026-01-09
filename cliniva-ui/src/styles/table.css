@@ -1,25 +1,30 @@
 .appointments-page {
-  margin-left: 255px;
+  margin-left: 260px;
   min-height: 100vh;
   background-color: #f5f7fa;
+  transition: margin-left 0.3s ease;
 }
 
 .appointments-container {
   padding: 30px;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .breadcrumb {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 30px;
+  gap: 10px;
+  margin-bottom: 25px;
   font-size: 14px;
   color: #666;
+  flex-wrap: wrap;
 }
 
 .breadcrumb a {
   color: #666;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .breadcrumb a:hover {
@@ -33,101 +38,131 @@
 .appointments-header {
   background-color: #e8edf5;
   padding: 20px 30px;
-  border-radius: 8px 8px 0 0;
+  border-radius: 10px 10px 0 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .appointments-title {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
   color: #333;
 }
 
 .search-box {
   position: relative;
-  width: 300px;
+  flex: 1;
+  max-width: 400px;
+  min-width: 250px;
 }
 
 .search-input {
   width: 100%;
-  padding: 10px 15px 10px 40px;
+  padding: 12px 18px 12px 45px;
   border: 1px solid #ddd;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 14px;
   outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
 }
 
 .search-icon {
   position: absolute;
-  left: 12px;
+  left: 15px;
   top: 50%;
   transform: translateY(-50%);
   color: #999;
+  font-size: 16px;
 }
 
 .download-btn {
-  padding: 10px 15px;
-  background-color: transparent;
+  padding: 12px 18px;
+  background-color: #4a90e2;
   border: none;
-  color: #4a90e2;
+  color: #fff;
   cursor: pointer;
   font-size: 18px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #357abd;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
 }
 
 .appointments-table-container {
   background-color: #ffffff;
-  border-radius: 0 0 8px 8px;
-  overflow: hidden;
+  border-radius: 0 0 10px 10px;
+  overflow-x: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .appointments-table {
   width: 100%;
   border-collapse: collapse;
+  min-width: 1000px;
 }
 
 .appointments-table thead {
   background-color: #f8f9fb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .appointments-table th {
-  padding: 15px 20px;
+  padding: 16px 20px;
   text-align: left;
   font-size: 13px;
   font-weight: 600;
   color: #333;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 2px solid #e5e7eb;
+  white-space: nowrap;
 }
 
 .appointments-table td {
-  padding: 15px 20px;
-  font-size: 13px;
+  padding: 16px 20px;
+  font-size: 14px;
   color: #555;
   border-bottom: 1px solid #f0f0f0;
+  white-space: nowrap;
 }
 
 .appointments-table tbody tr {
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
   cursor: pointer;
 }
 
 .appointments-table tbody tr:hover {
   background-color: #f8f9fb;
+  transform: scale(1.001);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .patient-info {
   display: flex;
   align-items: center;
   gap: 12px;
+  min-width: 150px;
 }
 
 .patient-avatar {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   object-fit: cover;
   background: linear-gradient(135deg, #4a90e2, #357abd);
+  flex-shrink: 0;
 }
 
 .time-cell,
@@ -142,6 +177,7 @@
 .icon {
   font-size: 16px;
   color: #999;
+  flex-shrink: 0;
 }
 
 .email-icon {
@@ -157,11 +193,12 @@
 }
 
 .gender-badge {
-  padding: 5px 12px;
-  border-radius: 4px;
+  padding: 6px 14px;
+  border-radius: 6px;
   font-size: 12px;
   font-weight: 500;
   display: inline-block;
+  text-transform: capitalize;
 }
 
 .gender-male {
@@ -178,26 +215,36 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 12px;
+  padding: 8px 14px;
   border: none;
   background-color: transparent;
   cursor: pointer;
   font-size: 13px;
+  font-weight: 500;
   color: #333;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
+  border-radius: 6px;
+  transition: all 0.2s ease;
 }
 
 .action-btn:hover {
   background-color: #f0f0f0;
+  transform: translateY(-1px);
 }
 
 .approve-btn {
   color: #4caf50;
 }
 
+.approve-btn:hover {
+  background-color: #e8f5e9;
+}
+
 .cancel-btn {
   color: #f44336;
+}
+
+.cancel-btn:hover {
+  background-color: #ffebee;
 }
 
 .pagination {
@@ -207,6 +254,8 @@
   padding: 20px 30px;
   background-color: #ffffff;
   border-top: 1px solid #e5e7eb;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .items-per-page {
@@ -218,9 +267,9 @@
 }
 
 .items-per-page select {
-  padding: 6px 30px 6px 10px;
+  padding: 8px 35px 8px 12px;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 14px;
   outline: none;
   cursor: pointer;
@@ -229,54 +278,108 @@
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 10px center;
+  transition: all 0.2s ease;
+}
+
+.items-per-page select:hover {
+  border-color: #4a90e2;
+}
+
+.items-per-page select:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
 }
 
 .pagination-info {
   font-size: 14px;
   color: #666;
+  font-weight: 500;
 }
 
 .pagination-controls {
   display: flex;
-  gap: 8px;
+  gap: 10px;
 }
 
 .pagination-btn {
-  padding: 8px 12px;
+  padding: 10px 14px;
   border: 1px solid #ddd;
   background-color: #fff;
   cursor: pointer;
-  border-radius: 4px;
-  font-size: 16px;
+  border-radius: 6px;
+  font-size: 18px;
   color: #666;
   transition: all 0.2s ease;
+  min-width: 40px;
 }
 
 .pagination-btn:hover:not(:disabled) {
-  background-color: #f8f9fb;
+  background-color: #4a90e2;
   border-color: #4a90e2;
-  color: #4a90e2;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
 }
 
 .pagination-btn:disabled {
-  opacity: 0.5;
+  opacity: 0.4;
   cursor: not-allowed;
 }
 
-@media (max-width: 1024px) {
+/* Tablet Landscape (1025px - 1280px) */
+@media (max-width: 1280px) {
   .appointments-page {
-    margin-left: 70px;
+    margin-left: 80px;
   }
 
-  .appointments-table th:nth-child(n+7),
-  .appointments-table td:nth-child(n+7) {
+  .appointments-table {
+    min-width: 900px;
+  }
+}
+
+/* Tablet Portrait (768px - 1024px) */
+@media (max-width: 1024px) {
+  .appointments-page {
+    margin-left: 80px;
+  }
+
+  .appointments-container {
+    padding: 20px;
+  }
+
+  .appointments-header {
+    padding: 18px 20px;
+  }
+
+  .appointments-title {
+    font-size: 16px;
+  }
+
+  .search-box {
+    min-width: 200px;
+  }
+
+  .appointments-table {
+    min-width: 800px;
+  }
+
+  .appointments-table th,
+  .appointments-table td {
+    padding: 14px 16px;
+    font-size: 13px;
+  }
+
+  /* Hide less important columns on tablet */
+  .appointments-table th:nth-child(8),
+  .appointments-table td:nth-child(8) {
     display: none;
   }
 }
 
-@media (max-width: 768px) {
+/* Mobile Landscape & Portrait (481px - 767px) */
+@media (max-width: 767px) {
   .appointments-page {
-    margin-left: 60px;
+    margin-left: 70px;
   }
 
   .appointments-container {
@@ -285,26 +388,48 @@
 
   .appointments-header {
     flex-direction: column;
-    gap: 15px;
+    align-items: stretch;
     padding: 15px;
+    gap: 15px;
+  }
+
+  .appointments-title {
+    font-size: 16px;
+    text-align: center;
   }
 
   .search-box {
+    max-width: 100%;
+  }
+
+  .download-btn {
     width: 100%;
+    padding: 12px;
   }
 
   .appointments-table {
+    min-width: 600px;
     font-size: 12px;
   }
 
   .appointments-table th,
   .appointments-table td {
-    padding: 10px;
+    padding: 12px 10px;
   }
 
-  .appointments-table th:nth-child(n+5),
-  .appointments-table td:nth-child(n+5) {
+  /* Hide more columns on mobile */
+  .appointments-table th:nth-child(5),
+  .appointments-table td:nth-child(5),
+  .appointments-table th:nth-child(7),
+  .appointments-table td:nth-child(7),
+  .appointments-table th:nth-child(8),
+  .appointments-table td:nth-child(8) {
     display: none;
+  }
+
+  .patient-avatar {
+    width: 35px;
+    height: 35px;
   }
 
   .pagination {
@@ -312,16 +437,126 @@
     gap: 15px;
     padding: 15px;
   }
+
+  .pagination-info {
+    order: -1;
+    text-align: center;
+    width: 100%;
+  }
+
+  .items-per-page {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .pagination-controls {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
+/* Small Mobile (<480px) */
 @media (max-width: 480px) {
-  .appointments-table th:nth-child(n+4),
-  .appointments-table td:nth-child(n+4) {
+  .appointments-page {
+    margin-left: 60px;
+  }
+
+  .appointments-container {
+    padding: 10px;
+  }
+
+  .breadcrumb {
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .appointments-header {
+    padding: 12px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .appointments-title {
+    font-size: 14px;
+  }
+
+  .search-input {
+    padding: 10px 12px 10px 38px;
+    font-size: 13px;
+  }
+
+  .download-btn {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .appointments-table {
+    min-width: 450px;
+  }
+
+  .appointments-table th,
+  .appointments-table td {
+    padding: 10px 8px;
+    font-size: 11px;
+  }
+
+  /* Show only essential columns */
+  .appointments-table th:nth-child(4),
+  .appointments-table td:nth-child(4),
+  .appointments-table th:nth-child(5),
+  .appointments-table td:nth-child(5),
+  .appointments-table th:nth-child(6),
+  .appointments-table td:nth-child(6),
+  .appointments-table th:nth-child(7),
+  .appointments-table td:nth-child(7),
+  .appointments-table th:nth-child(8),
+  .appointments-table td:nth-child(8) {
     display: none;
   }
 
   .patient-info {
-    flex-direction: column;
-    gap: 5px;
+    gap: 8px;
+    min-width: 120px;
+  }
+
+  .patient-avatar {
+    width: 30px;
+    height: 30px;
+  }
+
+  .gender-badge {
+    padding: 4px 10px;
+    font-size: 10px;
+  }
+
+  .pagination {
+    padding: 12px;
+  }
+
+  .items-per-page select {
+    padding: 6px 30px 6px 10px;
+    font-size: 12px;
+  }
+
+  .pagination-btn {
+    padding: 8px 12px;
+    font-size: 16px;
+    min-width: 36px;
+  }
+}
+
+/* Very Small Mobile (<360px) */
+@media (max-width: 359px) {
+  .appointments-page {
+    margin-left: 60px;
+  }
+
+  .appointments-table {
+    min-width: 380px;
+  }
+
+  .appointments-table th,
+  .appointments-table td {
+    padding: 8px 6px;
+    font-size: 10px;
   }
 }
